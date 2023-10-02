@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<h2>Оновлення данних користувача</h2>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Зберегти даннi</button>
+</form>
+
+{% endblock %}
